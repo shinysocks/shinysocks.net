@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    color: white;
+}
+
+body {
+    background-color: #b4befe;
+    font-family: 'Inter', sans-serif;
+    font-size: larger;
+    text-align: center;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: #b4befe;
+}
+
+h2 {
+    color: #b4befe;
+}
+
+#background {
+    margin: 10px 5px;
+    border-radius: 8px;
+    background-color: black;
+}
+
+#buzzo {
+    width: 100px;
+    border-radius: 100px;
+    margin-top: 30px;
+}
+
+#title {
+    color: white;
+    text-align: center;
+    font-weight: 900;
+}
+
+#icon {
+    background-color: #b4befe;
+    padding: 7px 7px 4px 7px;
+    margin: 10px;
+    border-width: 0px;
+    border-radius: 15px;
+}
+
+#icon:hover {
+    background-color: #1e1e2e;
+}
+
+#icons {
+    background-color: #1e1e2e;
+    padding: 7px;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-width: 0px;
+    border-radius: 15px;
+    width: 275px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#support {
+    background-color: #eba0ac;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    border-width: 0px;
+    border-radius: 10px;
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#support:hover {
+    background-color: #e66287;
+}
+
+.flex-container {
+    display: flex;
+    padding: 20px;
+}
+
+#flex-container2 {
+    display: grid;
+    padding: 0px;
+}
+
+#section {
+    background-color: black;
+    padding: 15px;
+    border-width: 0px;
+    border-radius: 15px;
+    margin: 20px;
+    width: auto;
+}
+
+@media only screen and (max-width: 900px) {
+    .flex-container {
+        display: grid;
+        padding: 10px;
+    }
+
+    #section {
+        background-color: #1e1e2e;
+        width: auto;
+        margin: 10px;
+    }
+}
+
+#section:hover {
+    background-color: #1e1e2e;
+}
+
+#skills {
+    margin-bottom: 20px;
+}
+
+#neofetch {
+    width: 85%;
+    border-radius: 10px;
+}
+
+#boxcat {
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+#stuff {
+    background-color: #b4befe;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+    border-width: 0px;
+    border-radius: 10px;
+}
+
+#stuff:hover {
+    background-color: black;
+    color: #b4befe;
+}
+
+li {
+    margin-left: 10%;
+    margin-right: 10%;
+
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+#cat {
+    margin-top: -10px;
+    width: 200px;
+}
