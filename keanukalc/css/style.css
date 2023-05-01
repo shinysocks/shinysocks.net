@@ -51,31 +51,21 @@ body {
     margin-bottom: -5%;
 }
 
-button:hover {
-    background-color: rgb(141, 145, 255);
-    color: black;
-}
-
 #home {
-    background-color: black;
-    border-radius: 8px;
-    font-size: 15px;
+    background-color: #b4befe;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
     border-width: 0px;
-    margin: 6px;
+    border-radius: 10px;
+
     margin-bottom: -10px;
     padding: 7px 15px;
-    color: rgb(168, 160, 255);
-    
-    border-color: rgb(141, 145, 255);
 }
 
 #home:hover {
-    background-color: rgb(141, 145, 255);
-    border-radius: 8px;
-    font-size: 15px;
-    border-color: rgb(141, 145, 255);
-    margin: 6px;
-    margin-bottom: -10px;
-    padding: 7px 15px;
-    color: black;
+    background-color: black;
+    color: #b4befe;
 }
