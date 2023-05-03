@@ -44,21 +44,44 @@ h2 {
     margin-right: auto;
 }
 
-#icon {
+.icon {
     background-color: black;
-    padding: 7px 7px 4px 7px;
-    margin: 10px;
+    margin: 5px;
     border-width: 0px;
     border-radius: 15px;
+    width: 40px;
+    height: 40px;
 }
 
-#icon:hover {
+.icon:hover {
     background-color: #b4befe;
 }
 
+#discord-icon {
+    background: url("../images/discord-light.png") no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+
+#discord-icon:hover {
+    background-color: ;
+    background: url("../images/discord.png") no-repeat;
+}
+
+#github-icon {
+    background: url("../images/github-light.png") no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+
+#github-icon:hover {
+    background: url("../images/github.png") no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+
 #icons {
-    background-color: black;
-    width: 275px;
+    width: 300px;
     margin-left: auto;
     margin-right: auto;
 }
