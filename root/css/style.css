@@ -165,18 +165,8 @@ li {
     width: 200px;
 }
 
-#thumbnail-bg {
-    background-color: black;
-    border-radius: 10px;
-    width: 95%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-}
-
 #thumbnail {
     border-radius: 10px;
-    margin: 4%;
-    width: 55%;
+    margin: auto;
+    width: 60%;
 }
