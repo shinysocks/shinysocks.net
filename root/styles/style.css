@@ -83,33 +83,37 @@ h2 {
 
 .flex-container {
     display: flex;
-    padding: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-#flex-container2 {
+#flex-column {
     display: grid;
-    padding: 0px;
+    flex: 1;
 }
 
 #section {
-    background-color: black;
     padding: 15px;
     border-width: 0px;
     border-radius: 15px;
-    margin: 20px;
-    width: auto;
+    flex: 1;
+    margin-bottom: 20px;
+    
 }
 
 @media only screen and (max-width: 900px) {
     .flex-container {
         display: grid;
-        padding: 10px;
     }
 
     #section {
         background-color: #1e1e2e;
         width: auto;
-        margin: 10px;
+    }
+
+    #flex-column {
+        margin-top: -10px;
     }
 
     #title {
