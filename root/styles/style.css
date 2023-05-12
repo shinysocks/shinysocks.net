@@ -181,3 +181,46 @@ li {
     width: 40%;
     align-items: right;
 }
+
+#error-background {
+    border-radius: 10px;
+    background-color: black;
+    height: 90vh;
+    align-items: center;
+    padding: 7%;
+}
+
+#cat-silhouette {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    width: 200px;
+    border-radius: 100%;
+}
+
+#error {
+    font-size: 125px;
+    font-weight: bolder;
+    color: #e66287;
+    margin: 2px;
+}
+
+#error-text {
+    font-size: xx-large;
+    font-weight: bolder;
+    color: #b4befe;
+    margin: 2px;
+}
+
+#home-icon {
+    border-radius: 10px;
+    border-width: 0px;
+    margin: 20px;
+    padding: 6px;
+
+    background-color: black;
+}
+
+#home-icon:hover {
+    background-color: #1e1e2e;
+}
