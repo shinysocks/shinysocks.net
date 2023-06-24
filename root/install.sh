@@ -10,7 +10,8 @@ echo Downloading icon...
 curl -#fLO https://raw.githubusercontent.com/Masbender/text-dungeon/main/install/icon.png
 
 # allow binary to launch
-sudo chmod +x text-dungeon text-dungeon.desktop
+echo Root permissions are required to allow executing
+sudo chmod +x text-dungeon
 
 # generate desktop entry
 echo [Desktop Entry] >> text-dungeon.desktop
@@ -18,8 +19,11 @@ echo Name=Text Dungeon >> text-dungeon.desktop
 echo Type=Application >> text-dungeon.desktop
 echo Comment=suffer alone in your terminal! >> text-dungeon.desktop
 echo Icon=$(pwd)/icon.png >> text-dungeon.desktop
+echo Path=$(pwd) >> text-dungeon.desktop
 echo Exec=$(pwd)/text-dungeon >> text-dungeon.desktop
 echo Terminal=true >> text-dungeon.desktop
 
 # copy .desktop file to ~/.local/share/applications
-cp text-dungeon.desktop ~/.local/share/applications/
+mv text-dungeon.desktop ~/.local/share/applications/
+echo Generated desktop entry
+echo Text Dungeon installed at $(pwd)
