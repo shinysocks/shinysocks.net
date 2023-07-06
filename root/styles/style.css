@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #b4befe;
+    background-color: #a4b9ef;
     font-family: 'Inter', sans-serif;
     font-size: larger;
     text-align: center;
@@ -16,11 +16,11 @@ a {
 }
 
 a:hover {
-    color: #b4befe;
+    color: #a4b9ef;
 }
 
 h2 {
-    color: #b4befe;
+    color: #a4b9ef;
 }
 
 #background {
@@ -53,7 +53,7 @@ h2 {
 }
 
 #icon:hover {
-    background-color: #b4befe;
+    background-color: #a4b9ef;
 }
 
 #icons {
@@ -70,6 +70,7 @@ h2 {
     margin: 10px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: -20px;
     gap: 10px;
 }
 
@@ -168,7 +169,7 @@ h2 {
 }
 
 #stuff {
-    background-color: #b4befe;
+    background-color: #a4b9ef;
     color: black;
     font-size: large;
     font-weight: bold;
@@ -180,7 +181,7 @@ h2 {
 
 #stuff:hover {
     background-color: black;
-    color: #b4befe;
+    color: #a4b9ef;
 }
 
 li {
@@ -228,7 +229,7 @@ li {
 #error-text {
     font-size: xx-large;
     font-weight: bolder;
-    color: #b4befe;
+    color: #a4b9ef;
     margin: 2px;
 }
 
