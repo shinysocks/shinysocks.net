@@ -52,15 +52,89 @@ li {
     margin-right: auto;
 }
 
-#icon {
-    background-color: black;
-    padding: 7px 7px 4px 7px;
+.icon {
     margin: 10px;
     border-width: 0px;
     border-radius: 15px;
+    width: 45px;
+    height: 45px;
 }
 
-#icon:hover {
+#linkedin {
+    background: url("../images/linkedin-light.png") no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+
+#linkedin:hover {
+    background: url("../images/linkedin.png") no-repeat;
+    background-size: 30px;
+    background-position: center;
+    background-color: #a4b9ef;
+}
+
+#mail {
+    background: url("../images/mail-light.png") no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+
+#mail:hover {
+    background: url("../images/mail.png") no-repeat;
+    background-size: 30px;
+    background-position: center;
+    background-color: #a4b9ef;
+}
+
+#github {
+    background: url("../images/github-light.png") no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+
+#github:hover {
+    background: url("../images/github.png") no-repeat;
+    background-size: 30px;
+    background-position: center;
+    background-color: #a4b9ef;
+}
+
+#gitea {
+    background: url("../images/gitea-light.png") no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+
+#gitea:hover {
+    background: url("../images/gitea.png") no-repeat;
+    background-size: 30px;
+    background-position: center;
+    background-color: #a4b9ef;
+}
+
+#invidious {
+    background: url("../images/invidious-light.png") no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+
+#invidious:hover {
+    background: url("../images/invidious.png") no-repeat;
+    background-size: 30px;
+    background-position: center;
+    background-color: #a4b9ef;
+}
+
+#nextcloud {
+    background: url("../images/nextcloud-light.png") no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+
+#nextcloud:hover {
+    background: url("../images/nextcloud.png") no-repeat;
+    background-size: 30px;
+    background-position: center;
     background-color: #a4b9ef;
 }
 
