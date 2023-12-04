@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="keanukalc/favicon.ico" />
+    <title>keanukalc</title>
+
+    <script>
+        function calculate() {
+            const output = document.getElementById("output");
+            const input1 = document.getElementById("input1");
+            const operator = document.getElementById("operator");
+            const input2 = document.getElementById("input2");
+            let answer = undefined;
+
+            switch (operator.value) {
+                case "add":
+                    answer = parseInt(input1.value) + parseInt(input2.value);
+                    break;
+                case "subtract":
+                    answer = parseInt(input1.value) - parseInt(input2.value);
+                    break;
+
+                case "divide":
+                    answer = parseInt(input1.value) / parseInt(input2.value);
+                    break;
+
+                case "multiply":
+                    answer = parseInt(input1.value) * parseInt(input2.value);
+                    break;
+            
+                case "mod":
+                    answer = parseInt(input1.value) % parseInt(input2.value);
+                    break;
+        
+                default:
+                    answer = "Keanu doesn't understand.";
+                    break;
+            }
+
+            if (isNaN(answer) || !isFinite(answer)) {
+                output.innerHTML = "Keanu is angry.";
+            } else {
+                output.innerHTML = answer;
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+        }
+
+        #keanu {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            margin-top: -50px;
+        }
+
+        .calc {
+            position: absolute;
+            height: 100%;
+            width: 30%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .inputs {
+            color: rgb(141, 145, 255);
+            background-color: black;
+            padding: 10px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            font-size: medium;
+            text-align: center;
+            margin: 10%;
+            font-weight: bold;
+        }
+
+        #output {
+            background-color: rgb(141, 145, 255);
+            padding: 10px 10px;
+            border: none;
+            border-radius: 10px;
+            text-align: center;
+            margin: 15%;
+            font-weight: bold;
+            max-width: 100%;
+
+            text-align: center;
+            color: black;
+            font-size: 50px;
+            font-weight: bolder;
+            margin-bottom: -5%;
+        }
+
+        #home {
+            background-color: #b4befe;
+            color: black;
+            font-size: large;
+            font-weight: bold;
+            text-align: center;
+            padding: 8px;
+            border-width: 0px;
+            border-radius: 10px;
+
+            margin-bottom: -10px;
+            padding: 7px 15px;
+        }
+
+        #home:hover {
+            background-color: black;
+            color: #b4befe;
+        }
+    </style>
+</head>
+<body>
+    <a href="/">
+        <button type="button" id="home">home</button>
+    </a>
+    <div class="face">
+        <img id="keanu" src="keanukalc/keanu.png" alt="sexy keanu!">
+        <div class="calc">
+            <h1 id="output" class="output">welcome!</h1>
+            <input class="inputs" id="input1" type="text" placeholder="Enter a number:">
+            <select id="operator" class="inputs">
+                <option value="">choose an operator</option>
+                <option value="add">+</option>
+                <option value="subtract">-</option>
+                <option value="multiply">*</option>
+                <option value="divide">/</option>
+                <option value="mod">%</option>
+            </select>
+            <input class="inputs" id="input2" type="text" placeholder="Enter a number!">
+            <button type="button" class="inputs" id="enter" onclick="calculate()">Utilize Keanu's Calculation Abilities!</button>
+        </div>
+    </div>
+</body>
+</html>
