@@ -1,4 +1,4 @@
- #[macro_use] extern crate rocket;
+#[macro_use] extern crate rocket;
 
 use rand::seq::IteratorRandom;
 use std::fs;
@@ -11,7 +11,7 @@ async fn home() -> Option<NamedFile> {
 
 #[get("/robots.txt")]
 async fn robots() -> Option<NamedFile> {
-    NamedFile::open("robots.txt").await.ok()
+    NamedFile::open("static/robots.txt").await.ok()
 }
 
 #[get("/keanukalc")]
