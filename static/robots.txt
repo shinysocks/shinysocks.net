@@ -1,2 +1,7 @@
-User-agent: *   # any robot
-Disallow: /     # disallow this directory
+# allow google to index site
+User-agent: Googlebot
+Allow: /
+
+# disallow all other webscrappers
+User-agent: *
+Disallow: /
