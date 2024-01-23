@@ -2,82 +2,82 @@
 <html lang="en">
 
 <head>
+    <!-- page made and hosted by Noah Dinan aka shinysocks -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
-
-    <!-- preloading dark icon images -->
     <link rel="preload" as="image" href="images/github.png">
     <link rel="preload" as="image" href="images/linkedin.png">
     <link rel="preload" as="image" href="images/mail.png">
-
+    <link rel="preload" as="image" href="images/itch.png">
+    
     <title>Noah Dinan</title>
+
     <style>
+
         @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-        * {
-            color: white;
-        }
-
         body {
-            background-color: #a4b9ef;
+            color: white;
+            background-color: #b4befe;
             font-family: 'Inter', sans-serif;
-            font-size: larger;
+            font-size: x-large;
             text-align: center;
-            padding-top: 1px;
+            padding: 5px;
         }
 
         a {
-            color: white;
+            color: #b4befe;
         }
 
         a:hover {
-            color: #a4b9ef;
+            color: #f38ba8;
         }
 
         h2 {
-            color: #a4b9ef;
+            color: #b4befe;
         }
 
         h3 {
-            color: #f38ba8;
-            margin: -5px;
+            color: #f9e2af;
+            text-align: left;
+            margin-left: 10%;
+            margin-bottom: 8px;
         }
 
-        li {
+        p {
             margin-left: 10%;
             margin-right: 10%;
 
-            margin-bottom: 25px;
+            margin-bottom: 27px;
             text-align: left;
+            color: #a6adc8;
         }
 
         img {
             border-radius: 10px;
         }
 
-        #banner {
-            margin-bottom: 12px;
+        strong {
+            color: #bac2de;
         }
 
-        .section {
+        #section {
             padding: 15px;
             border-width: 0px;
             border-radius: 15px;
-            flex: 1;
             background-color: black;
-            margin: 6px;
         }
 
         #pfp {
-            width: 150px;
+            width: 120px;
             border-radius: 100px;
             margin-top: 15px;
         }
 
         #title {
-            color: #b1e3ad;
+            color: #45475a;
             text-align: center;
             width: 375px;
             margin-left: auto;
@@ -86,98 +86,93 @@
             margin-bottom: 15px;
         }
 
-        .flex-container {
-            display: flex;
-        }
-
-        #card {
-            width: 25%;
-        }
-
-        #button {
-            background-color: #a4b9ef;
-            color: black;
-            font-size: large;
-            font-weight: bold;
-            text-align: center;
-            padding: 8px;
-            border-width: 0px;
-            border-radius: 10px;
-        }
-
-        #button:hover {
-            background-color: black;
-            color: #a4b9ef;
-        }
-
         #cat {
-            margin-top: -6px;
             width: 200px;
         }
 
         @media only screen and (max-width: 900px) {
-            .flex-container {
-                display: grid;
-            }
-
             #title {
                 width: 300px;
             }
         }
 
         .icon {
-            margin: 10px;
+            margin: 8px;
             border-width: 0px;
-            border-radius: 15px;
-            width: 45px;
-            height: 45px;
+            border-radius: 10px;
+            width: 55px;
+            height: 55px;
         }
 
         #linkedin {
             background: url("images/linkedin-light.png") no-repeat;
-            background-size: 30px;
+            background-size: 40px;
             background-position: center;
         }
 
         #linkedin:hover {
             background: url("images/linkedin.png") no-repeat;
-            background-size: 30px;
+            background-size: 40px;
             background-position: center;
-            background-color: #a4b9ef;
+            background-color: #b4befe;
         }
 
         #mail {
             background: url("images/mail-light.png") no-repeat;
-            background-size: 30px;
+            background-size: 40px;
             background-position: center;
         }
 
         #mail:hover {
             background: url("images/mail.png") no-repeat;
-            background-size: 30px;
+            background-size: 40px;
             background-position: center;
-            background-color: #a4b9ef;
+            background-color: #b4befe;
         }
 
         #github {
             background: url("images/github-light.png") no-repeat;
-            background-size: 30px;
+            background-size: 40px;
             background-position: center;
         }
 
         #github:hover {
             background: url("images/github.png") no-repeat;
-            background-size: 30px;
+            background-size: 40px;
             background-position: center;
-            background-color: #a4b9ef;
+            background-color: #b4befe;
+        }
+
+        #itch {
+            background: url("images/itch-light.png") no-repeat;
+            background-size: 40px;
+            background-position: center;
+        }
+
+        #itch:hover {
+            background: url("images/itch.png") no-repeat;
+            background-size: 40px;
+            background-position: center;
+            background-color: #b4befe;
+        }
+
+        #steam {
+            background: url("images/steam-light.png") no-repeat;
+            background-size: 40px;
+            background-position: center;
+        }
+
+        #steam:hover {
+            background: url("images/steam.png") no-repeat;
+            background-size: 40px;
+            background-position: center;
+            background-color: #b4befe;
         }
     </style>
 </head>
 
 <body>
-    <div class="section" id="banner"><h3>TRANS RIGHTS ARE HUMAN RIGHTS.</h3></div>
-
-    <div class="section">
+    <div id="section">
         <img id="pfp" src="images/pfp.jpg" alt="noah">
         <h1 id="title">hey, i'm shinysocks!</h1>
 
@@ -185,145 +180,90 @@
             <a href="https://linkedin.com/in/noah-dinan" target="_blank"><button id="linkedin" class="icon"></button></a>
             <a href="mailto:noah@shinysocks.net" target="_blank"><button id="mail" class="icon"></button></a>
             <a href="https://github.com/shinysocks" target="_blank"><button id="github" class="icon"></button></a>
-        </div>
-    </div>
-
-    <div class="flex-container">
-        <div class="section">
-            <h2>about me</h2>
-            <li>
-                Hello, my name is Noah Dinan and I am a senior at Ronald Reagan College Prep High School.
-                I am a part of the IB full Diploma Programme and <a href="https://frc1675.com" target="_blank">FIRST Robotics Team 1675</a>. 
-                I plan to either attend MSOE or UW-Madison after graduation.
-            </li>
-            <li>
-                Check out my resume:
-                <br>
-                <br>
-                <a href='share/resume.pdf'
-                    target="_blank">
-                    <button id="button">
-                        resume
-                    </button>
-                </a>
-            </li>
-            <li>
-                I ❤️ cats, computer programming, singing, and gaming on linux!. Some of my favorite games are 
-                Terraria, Inscryption, Outer Wilds, Stray, Baldur's Gate 3, Night in the Woods, and Barony.
-
-                <br>
-                <br>
-
-                <a href="https://steamcommunity.com/profiles/76561199074928968/" target="_blank">
-                    <img id="card" src="images/card.png" alt="inscryption card">
-                </a>
-            </li>
+            <a href="https://shinysocks.itch.io" target="_blank"><button id="itch" class="icon"></button></a>
+            <a href="https://steamcommunity.com/profiles/76561199074928968/" target="_blank"><button id="steam" class="icon"></button></a>
         </div>
 
-        <div class="section">
-            <h2>skills & interests</h2>
-            <img width="300px" id="skills" src="https://skillicons.dev/icons?i=linux,python,java,git,bash,docker,vscode,unity,cs,rust&perline=5">
+        <h2>[about me]</h2>
+        <p>
+            Hello, my name is Noah Dinan and I am a senior at Ronald Reagan College Prep High School.
+            I am a part of the IB full Diploma Programme and <a href="https://frc1675.com" target="_blank">FIRST Robotics Team 1675</a>. 
+            I plan to either attend MSOE or UW-Madison after graduation.
+        </p>
+        <p>
+            Check out my <a href='share/resume.pdf' target="_blank">resume</a>!
+        </p>
+        <p>
+            I ❤️ cats, computer programming, singing, and gaming on linux! Some of my favorite games are 
+            Terraria, Inscryption, Outer Wilds, Stray, Baldur's Gate 3, Night in the Woods, and Barony.
+        </p>
 
-            <br>
-            <br>
+        <h2>[skills & interests]</h2>
+        <img width="300px" id="skills" src="https://skillicons.dev/icons?i=linux,python,java,git,bash,docker,vscode,unity,cs,rust&perline=5">
 
-            <li>
-                On my personal laptop, I use PopOS and have enjoyed configuring and 
-                customizing it while learning my way around a linux environment.
-            </li>
-            <a href="images/neofetch.png" target="_blank">
-                <img width="75%" src="images/neofetch.png" alt="neofetch">
-            </a>
+        <p>
+            On my personal laptop, I use PopOS and have enjoyed configuring and 
+            customizing it while learning my way around a linux environment.
+        </p>
+        <p>
+            I currently host this site on rocket.rs & docker  
+            on a Raspberry Pi Zero 2 W. Check out the code on github: 
+            <a href="https://github.com/shinysocks/shinysocks.net" target="_blank">shinysocks/shinysocks.net</a> 
+        </p>
 
-            <br>
-            <br>
+        <h2>[projects]</h2>
 
-            <li>
-                I currently host a server nicknamed "odin" which hosts this site on using rocket.rs & docker. 
-                I'm currently migrating odin to a Raspberry Pi Zero 2 W. Check out the code on github: 
-                 <a href="https://github.com/shinysocks/shinysocks.net" target="_blank">shinysocks/shinysocks.net</a> 
-                <br>
-                <br>
-
-                <a href="images/odin.jpg" target="_blank">
-                    <img width="300px" src="images/odin.jpg" alt="odin">
-                </a>
-            </li>
-        </div>
-    </div>
-    <div class="section">
-        <h2>projects</h2>
-
-        <li>
+        <a href="https://github.com/frc1675/frc1675-2024" target="_blank"><h3>robotics</h3></a>
+        <p>
             <strong>Winter 2024</strong>
             <br>
-            As my first robotics build season begins, I learned how to do some high-fidelity prototyping on a potential manipulator
-            for the robot. 
-            Follow our programming progress this season <a href="https://github.com/frc1675/frc1675-2024" target="_blank">on github</a>. 
-            <br>
+            As my first robotics build season begins, I've learned how to do high-fidelity prototyping on a potential manipulator
+            for the robot.
             <br>
 
-            <a href="share/prototypelog.pdf" target="_blank"><button id="button">Open Alliance Side Roller Prototype Log</button></a>
-        </li>
+            <a href="share/prototypelog.pdf" target="_blank">Side-Wheel Prototype</a>
+        </p>
 
-        <li>
+        <a target="_blank" href="share/ticktacktoe.jar" download><h3>ticktacktoe</h3></a>
+        <p>
             <strong>Fall 2023</strong>
             <br>
             To practice using Java's Swing framework, I created a version of tic-tac-toe with claymation.
-            Download the .jar executable below:
-            <br>
-            <br>
-
-            <a target="_blank" href="share/ticktacktoe.jar" download><img width="300px" src="images/ticktacktoe.jpg" alt="ticktacktoe"></a>
-        </li>
-
-        <li>
+        </p>
+    
+        <a target="_blank" href="https://shinysocks.itch.io/couriercat"><h3>couriercat</h3></a>
+        <p>
             <strong>Summer & Fall 2023</strong>
             <br>
             couriercat is my second collaborative game project. This simple exploration game was built in the Unity game engine
             for Android and WebGL. Play or download it on itch.io.
-            <br>
-            <br>
-            <a target="_blank" href="https://shinysocks.itch.io/couriercat"><img width="300px" src="images/couriercat.png" alt="couriercat"></a>
-        </li>
-
-        <li>
-            Created a 400 frame stop motion short to depict themes from the short story "Without Inspection" by Edwidge Danticat.
-            <br>
-            <br>
-            <a target="_blank" href="share/mov.mp4"><img width="300px" src="images/thumbnail.png" alt="movie thumbnail"></a>
-            <br>
+        </p>
         
-        </li>
-        
-        <li>
+        <a target="_blank" href="https://shinysocks.itch.io/oozing"><h3>oozing</h3></a>
+        <p>
             <strong>Summer 2022</strong>
             <br>
             OOZING is an odd little game where you play as a cat with a cannon.
             This was a small collaborative game built using the Unity Game Engine and C# with a group of friends.
-            Check out the WebGL version below:
-            <br>
-            <br>
-            <a target="_blank" href="https://shinysocks.itch.io/oozing"><img width="300px" src="images/oozing.jpg" alt="oozing"></a>
-            <br>
-        </li>
+        </p>
 
-        <li>
+        <a target="_blank" href="https://github.com/Zero6992/chatGPT-discord-bot"><h3>chatGPT-discord-bot</h3></a>
+        <p>
+            <strong>Spring/Summer 2022</strong>
+            <br>
             I was interested in creating a discord bot that allowed a user to interact with chatgpt's various <a href="https://www.jailbreakchat.com/" target="_blank">jailbreaks</a>. I decided to fork
-            Zero6992's <a href="https://github.com/Zero6992/chatGPT-discord-bot" target="_blank">chatGPT-discord-bot</a> and add personas as well as image generation.
+            Zero6992's chatGPT-discord-bot and add personas as well as image generation.
             <br>
-        </li>
+        </p>
 
-        <li>
+        <a target="_blank" href="https://shinysocks.itch.io/raccoonundrum"><h3>raccoonundrum</h3></a>
+        <p>
             <strong>Fall 2021</strong>
             <br>
             Raccoonundrum, written in Python with the Pygame library, was one of my first large coding projects 
-            built for the IB Middle Years Programme personal project. Check it out on itch.io:
-
-            <br>
-            <br>
-            <a href='https://shinysocks.itch.io/raccoonundrum' target="_blank"><button id="button"><img src="images/raccoon.png" alt="raccoon"  width="70px"><br>raccoonundrum</button></a>
-        </li>
+            built for the IB Middle Years Programme personal project.
+        </p>
+        <br>
     </div>
     <img id="cat" src="images/cat.png" alt="bottom cat">
 </body>
