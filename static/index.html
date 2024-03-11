@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <!-- page made and hosted by Noah Dinan aka shinysocks -->
+  <!-- made and hosted by Noah Dinan aka shinysocks -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,75 +19,35 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
     body {
-      color: white;
       background-color: #b4befe;
       font-family: 'Inter', sans-serif;
       font-size: x-large;
-      text-align: center;
-      padding: 5px;
-    }
-
-    a {
-      color: #b4befe;
-    }
-
-    a:hover {
-      color: #f38ba8;
-    }
-
-    h2 {
-      color: #b4befe;
-    }
-
-    h3 {
-      color: #f9e2af;
-      text-align: left;
-      margin-left: 10%;
-      margin-bottom: 8px;
-    }
-
-    p {
-      margin-left: 10%;
-      margin-right: 10%;
-
-      margin-bottom: 27px;
-      text-align: left;
-      color: #a6adc8;
-    }
-
-    img {
-      border-radius: 10px;
-    }
-
-    strong {
-      color: #bac2de;
     }
 
     #section {
-      padding: 15px;
-      border-width: 0px;
-      border-radius: 15px;
+      position: absolute;
+      text-align: center;
       background-color: black;
+      align-items: center;
+      padding: 50px;
+      border-radius: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
     #pfp {
-      width: 120px;
+      width: 130px;
       border-radius: 100px;
-      margin-top: 15px;
+      margin-top: 10px;
     }
 
     #title {
       color: #45475a;
       text-align: center;
       width: 500px;
-      margin-left: auto;
-      margin-right: auto;
       margin-top: 15px;
       margin-bottom: 15px;
-    }
-
-    #cat {
-      width: 200px;
     }
 
     @media only screen and (max-width: 900px) {
@@ -102,212 +62,67 @@
       border-radius: 10px;
       width: 55px;
       height: 55px;
+      filter: brightness(0) saturate(100%) invert(86%) sepia(22%) saturate(4865%) hue-rotate(189deg) brightness(103%) contrast(99%);
+    }
+
+    .top-icon:hover {
+      background-color: #45475a;
     }
 
     #linkedin {
-      background: url("images/linkedin-light.webp") no-repeat;
+      background: url("images/linkedin.svg") no-repeat;
       background-size: 40px;
       background-position: center;
-    }
-
-    #linkedin:hover {
-      background: url("images/linkedin.webp") no-repeat;
-      background-size: 40px;
-      background-position: center;
-      background-color: #b4befe;
     }
 
     #mail {
-      background: url("images/mail-light.webp") no-repeat;
+      background: url("images/mail.svg") no-repeat;
       background-size: 40px;
       background-position: center;
-    }
-
-    #mail:hover {
-      background: url("images/mail.webp") no-repeat;
-      background-size: 40px;
-      background-position: center;
-      background-color: #b4befe;
     }
 
     #github {
-      background: url("images/github-light.webp") no-repeat;
+      background: url("images/github.svg") no-repeat;
       background-size: 40px;
       background-position: center;
-    }
-
-    #github:hover {
-      background: url("images/github.webp") no-repeat;
-      background-size: 40px;
-      background-position: center;
-      background-color: #b4befe;
     }
 
     #itch {
-      background: url("images/itch-light.webp") no-repeat;
+      background: url("images/itch.svg") no-repeat;
       background-size: 40px;
       background-position: center;
-    }
-
-    #itch:hover {
-      background: url("images/itch.webp") no-repeat;
-      background-size: 40px;
-      background-position: center;
-      background-color: #b4befe;
     }
 
     #steam {
-      background: url("images/steam-light.webp") no-repeat;
+      background: url("images/steam.svg") no-repeat;
       background-size: 40px;
       background-position: center;
     }
 
-    #steam:hover {
-      background: url("images/steam.webp") no-repeat;
+    #resume {
+      background: url("images/resume.svg") no-repeat;
       background-size: 40px;
       background-position: center;
-      background-color: #b4befe;
     }
   </style>
 </head>
 
 <body>
   <div id="section">
-    <img id="pfp" src="images/pfp.webp" alt="noah">
+    <img id="pfp" src="images/pfp.png" alt="noah">
     <h1 id="title">hey, i'm shinysocks!</h1>
 
     <div>
+      <a href="https://github.com/shinysocks" target="_blank"><button id="github" class="top-icon"></button></a>
+      <a href="https://shinysocks.net/share/resume.pdf" target="_blank"><button id="resume"
+          class="top-icon"></button></a>
       <a href="https://linkedin.com/in/noah-dinan" target="_blank"><button id="linkedin" class="top-icon"></button></a>
       <a href="mailto:noah@shinysocks.net" target="_blank"><button id="mail" class="top-icon"></button></a>
-      <a href="https://github.com/shinysocks" target="_blank"><button id="github" class="top-icon"></button></a>
       <a href="https://shinysocks.itch.io" target="_blank"><button id="itch" class="top-icon"></button></a>
       <a href="https://steamcommunity.com/profiles/76561199074928968/" target="_blank"><button id="steam"
           class="top-icon"></button></a>
     </div>
-
-    <h2>[about me]</h2>
-    <p>
-      Hello, my name is Noah Dinan and I am a senior at Ronald Reagan College Prep High School.
-      I am a part of the IB full Diploma Programme and <a href="https://frc1675.com" target="_blank">FIRST Robotics Team
-        1675</a>.
-      I plan to either attend MSOE for Computer Engineering after high school graduation.
-    </p>
-    <p>
-      Check out my <a href='share/resume.pdf' target="_blank">resume</a>!
-    </p>
-    <p>
-      I ❤️ cats, computer programming, singing, and gaming on linux! Some of my favorite games are
-      Terraria, Inscryption, Outer Wilds, Stray, Baldur's Gate 3, Night in the Woods, and Barony.
-    </p>
-
-    <h2>[skills & interests]</h2>
-    <img width="300" id="skills" alt="skill icons"
-      src="https://skillicons.dev/icons?i=linux,python,java,git,bash,docker,vscode,unity,cs,rust&perline=5">
-
-    <p>
-      On my personal laptop, I daily drive Debian and have enjoyed configuring and
-      customizing it while learning my way around a linux environment. Recently, I've been loving the
-      <a href="https://github.com/helix-editor/helix" target="_blank">helix</a> modal editor.
-    </p>
-    <p>
-      I currently host this site on rocket.rs & docker
-      on a Raspberry Pi Zero 2 W. Check out the code on github:
-      <a href="https://github.com/shinysocks/shinysocks.net" target="_blank">shinysocks/shinysocks.net</a>
-    </p>
-
-    <h2>[projects]</h2>
-
-    <a href="https://shinysocks.net/share/maths.pdf" target="_blank">
-      <h3>maths ia</h3>
-    </a>
-    <p>
-      <strong>Winter 2024</strong>
-      <br>
-      For my IB Mathematics Internal Assessment I explored modeling the theoretical and experimental time
-      complexity for the Bubble Sort algorithm.
-      <br>
-    </p>
-
-    <a href="https://github.com/shinysocks/cliradio#cliradio" target="_blank">
-      <h3>cliradio</h3>
-    </a>
-    <p>
-      <strong>Winter 2024</strong>
-      <br>
-      For the IB Computer Science Internal Assessment I wrote a commandline audio streaming program in Java.
-      It allows users to stream audio from either a microphone or internally (with Pipewire) over a LAN.
-      <br>
-    </p>
-
-
-    <a href="https://github.com/frc1675/frc1675-2024" target="_blank">
-      <h3>robotics</h3>
-    </a>
-    <p>
-      <strong>Winter 2024</strong>
-      <br>
-      As my first robotics build season begins, I've learned how to do high-fidelity prototyping on a potential
-      manipulator
-      for the robot.
-      <br>
-
-      <a href="share/prototypelog.pdf" target="_blank">Side-Wheel Prototype</a>
-    </p>
-
-    <a target="_blank" href="share/ticktacktoe.jar" download>
-      <h3>ticktacktoe</h3>
-    </a>
-    <p>
-      <strong>Fall 2023</strong>
-      <br>
-      To practice using Java's Swing framework, I created a version of tic-tac-toe with claymation.
-    </p>
-
-    <a target="_blank" href="https://shinysocks.itch.io/couriercat">
-      <h3>couriercat</h3>
-    </a>
-    <p>
-      <strong>Summer & Fall 2023</strong>
-      <br>
-      couriercat is my second collaborative game project. This simple exploration game was built in the Unity game
-      engine
-      for Android and WebGL. Play or download it on itch.io.
-    </p>
-
-    <a target="_blank" href="https://shinysocks.itch.io/oozing">
-      <h3>oozing</h3>
-    </a>
-    <p>
-      <strong>Summer 2022</strong>
-      <br>
-      OOZING is an odd little game where you play as a cat with a cannon.
-      This was a small collaborative game built using the Unity Game Engine and C# with a group of friends.
-    </p>
-
-    <a target="_blank" href="https://github.com/Zero6992/chatGPT-discord-bot">
-      <h3>chatGPT-discord-bot</h3>
-    </a>
-    <p>
-      <strong>Spring/Summer 2022</strong>
-      <br>
-      I was interested in creating a discord bot that allowed a user to interact with chatgpt's various <a
-        href="https://www.jailbreakchat.com/" target="_blank">jailbreaks</a>. I decided to fork
-      Zero6992's chatGPT-discord-bot and add personas as well as image generation.
-      <br>
-    </p>
-
-    <a target="_blank" href="https://shinysocks.itch.io/raccoonundrum">
-      <h3>raccoonundrum</h3>
-    </a>
-    <p>
-      <strong>Fall 2021</strong>
-      <br>
-      Raccoonundrum, written in Python with the Pygame library, was one of my first large coding projects
-      built for the IB Middle Years Programme personal project.
-    </p>
-    <br>
   </div>
-  <img id="cat" src="images/cat.webp" alt="bottom cat">
 </body>
 
 </html>
