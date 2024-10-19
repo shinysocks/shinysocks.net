@@ -4,11 +4,12 @@ import express from "express"
 import { refreshTunes, shuffle, recentSongs, } from './music.js'
 import { getMeme, refreshMemes } from './meme.js'
 import ShortUniqueId from "short-unique-id"
-import { fileTypeFromFile } from "file-type"
 import path from "path"
 import pino from "pino"
 import pretty from "pino-pretty"
 import compression from "compression"
+import { detectBufferMime } from "mime-detect"
+import mime from "mime-types"
 
 const stream = pretty({
   colorize: true
@@ -92,17 +93,25 @@ app.put('/upload', (req, res) => {
   const stream = fs.createWriteStream(filepath)
 
   req.pipe(stream).on('finish', () => {
-    fileTypeFromFile(filepath).then((result) => {
-      ext = '.' + result.ext
-      fs.renameSync(filepath, filepath + ext)
-      res.status(201).send(SHARE_URL + filename + ext)
-      log.info(`uploaded ${filename}${ext}`)
-    }).catch(() => {
-      ext = '.txt' // TODO: read text based formats correctly
-      fs.renameSync(filepath, filepath + ext)
-      res.status(201).send(SHARE_URL + filename + ext)
-      log.info(`uploaded ${filename}${ext}`)
-    })
+    const file = Deno.openSync(filepath)
+    const buffer = new Uint8Array(10000000);
+    console.log(file.readSync(buffer));
+
+    detectBufferMime(buffer, (_error, m) => res.send(mime.extension(m) + "  " + m))
+
+    //fileTypeFromFile(filepath).then((result) => {
+    //  console.log(result);
+    //  ext = '.' + result.ext
+    //  fs.renameSync(filepath, filepath + ext)
+    //  res.status(201).send(SHARE_URL + filename + ext)
+    //  log.info(`uploaded ${filename}${ext}`)
+    //}).catch((e) => {
+    //  console.log(e);
+    //  ext = '.txt' // TODO: read text based formats correctly
+    //  fs.renameSync(filepath, filepath + ext)
+    //  res.status(201).send(SHARE_URL + filename + ext)
+    //  log.info(`uploaded ${filename}${ext}`)
+    //})
 
   }).on('error', () => {
     res.status(500).send('upload failed.')

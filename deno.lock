@@ -6,6 +6,8 @@
       "npm:cors": "npm:cors@2.8.5",
       "npm:express": "npm:express@4.21.0",
       "npm:file-type": "npm:file-type@19.5.0",
+      "npm:mime-detect": "npm:mime-detect@1.2.0",
+      "npm:mime-types": "npm:mime-types@2.1.35",
       "npm:path": "npm:path@0.12.7",
       "npm:pino": "npm:pino@9.4.0",
       "npm:pino-pretty": "npm:pino-pretty@11.2.2",
@@ -392,6 +394,12 @@
         "integrity": "sha512-oHlN/w+3MQ3rba9rqFr6V/ypF10LSkdwUysQL7GkXoTgIWeV+tcXGA852TBxH+gsh8UWoyhR1hKcoMJTuWflpg==",
         "dependencies": {}
       },
+      "mime-detect@1.2.0": {
+        "integrity": "sha512-8m9dv7XcO9rgB5RNt24GDYlSEAwcIS62++n0l3InKYtKOmhBocrMs+dvB/DkpUpS9JDjOkFpFpaybdNwYzOymw==",
+        "dependencies": {
+          "mime-db": "mime-db@1.53.0"
+        }
+      },
       "mime-types@2.1.35": {
         "integrity": "sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==",
         "dependencies": {
@@ -735,6 +743,8 @@
       "npm:cors",
       "npm:express",
       "npm:file-type",
+      "npm:mime-detect",
+      "npm:mime-types",
       "npm:path",
       "npm:pino",
       "npm:pino-pretty",
