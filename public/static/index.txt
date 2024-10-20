@@ -48,18 +48,18 @@
 
 \e[1;37m    [api]
 
-\e[1;32m        GET /t/:query \e[0;0m     -> get a shuffled tune which matches query
-\e[1;32m        GET /recentsongs \e[0;0m  -> get fifteen most recently added songs
-\e[1;32m        GET /meme \e[0;0m         -> get a meme
-\e[1;31m        PUT /upload \e[0;0m       -> upload a file
-\e[1;32m        GET /s/:file \e[0;0m      -> get a shared file
+\e[1;32m        GET /t/:query \e[0;0m    -> get a shuffled tune which matches query
+\e[1;32m        GET /recentsongs \e[0;0m -> get fifteen most recently added songs
+\e[1;32m        GET /meme \e[0;0m        -> get a meme
+\e[1;31m        PUT /up \e[0;0m          -> upload a file
+\e[1;32m        GET /s/:file \e[0;0m     -> get a shared file
 
 \e[1;37m    [usage]
 
-\e[1;90m        curl https://shinysocks.net/sh | bash \e[0;0m         -> view with color support
-\e[1;90m        curl https://shinysocks.net/t/hozier -o song.mp3 \e[0;0m -> download a song by hozier
-\e[1;90m        curl https://shinysocks.net/upload -T image.png \e[0;0m  -> upload an image file
-\e[1;90m        curl https://shinysocks.net/s/y36sgD.txt \e[0;0m   -> access an uploaded file
+\e[0;0m        view with color support    ->\e[1;90m curl https://shinysocks.net/sh | bash
+\e[0;0m        download a song by hozier  ->\e[1;90m curl https://shinysocks.net/t/hozier -o song.mp3
+\e[0;0m        upload an image file       ->\e[1;90m curl https://shinysocks.net/up -T image.png -H "name: uploaded_image.png"
+\e[0;0m        access an uploaded file    ->\e[1;90m curl https://shinysocks.net/s/uploaded_image.png 
 
 \e[1;37m    [projects]
 \e[0;0m    note: all code can be found on my github.

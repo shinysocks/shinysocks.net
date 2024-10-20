@@ -85,34 +85,28 @@ app.get('/meme', (_req, res) => {
   res.sendFile(path.join(MEMES_PATH, meme))
 })
 
-app.put('/upload', (req, res) => {
-  // uploads a file and returns a random generated url
-  const filename = suid.rnd()
-  let ext = ""
+app.put('/up', (req, res) => {
+  let filename = req.headers["name"];
+  let message = `uploaded ${filename}`
+
+  if (filename == undefined) {
+    filename = suid.rnd() + ".txt"
+    message = `no "name" header provided, uploaded ${filename}`
+  } else {
+    for (const entry of Deno.readDirSync(path.join(__dirname, 'public', 'share'))) {
+      if (filename == entry.name) {
+        filename = suid.rnd() + "." + req.headers['name'].split(".")[1]; 
+        message = `${req.headers['name']} already exists, uploaded ${filename}`
+      }
+    }
+  }
+
   const filepath = path.join(__dirname, 'public', 'share', filename)
   const stream = fs.createWriteStream(filepath)
 
   req.pipe(stream).on('finish', () => {
-    const file = Deno.openSync(filepath)
-    const buffer = new Uint8Array(10000000);
-    console.log(file.readSync(buffer));
-
-    detectBufferMime(buffer, (_error, m) => res.send(mime.extension(m) + "  " + m))
-
-    //fileTypeFromFile(filepath).then((result) => {
-    //  console.log(result);
-    //  ext = '.' + result.ext
-    //  fs.renameSync(filepath, filepath + ext)
-    //  res.status(201).send(SHARE_URL + filename + ext)
-    //  log.info(`uploaded ${filename}${ext}`)
-    //}).catch((e) => {
-    //  console.log(e);
-    //  ext = '.txt' // TODO: read text based formats correctly
-    //  fs.renameSync(filepath, filepath + ext)
-    //  res.status(201).send(SHARE_URL + filename + ext)
-    //  log.info(`uploaded ${filename}${ext}`)
-    //})
-
+    res.send(message)
+    log.info(message)
   }).on('error', () => {
     res.status(500).send('upload failed.')
     log.error("file upload failed")
