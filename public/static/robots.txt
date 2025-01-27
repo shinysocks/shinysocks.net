@@ -1,7 +1,14 @@
-# allow google to index site
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
 User-agent: Googlebot
 Allow: /
 
-# disallow all other webscrappers
 User-agent: *
 Disallow: /
