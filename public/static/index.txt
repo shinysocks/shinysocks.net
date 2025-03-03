@@ -23,7 +23,7 @@
         i currently attend MSOE for software engineering.
 
         i love cats, computer programming, singing, cycling, and gaming on linux! 
-        recent games: barotrauma, ufo 50, buckshot roulette, and disco elysium
+        recent games: night in the woods, baldur's gate, and disco elysium
 
         currently daily-driving debian on a system76 lemur laptop
         i've been programming in the neovim modal editor
@@ -41,7 +41,7 @@
 \e[1;37m    [skills & interests]  \e[0;0m
 
         javascript, java, bash,
-        python, c#, unity, rust
+        python, c#, unity, c++
 
         linux, docker, git,
         gitlab cicd, agile
