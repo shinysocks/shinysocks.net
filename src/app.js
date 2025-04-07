@@ -8,8 +8,6 @@ import path from "path"
 import pino from "pino"
 import pretty from "pino-pretty"
 import compression from "compression"
-import { detectBufferMime } from "mime-detect"
-import mime from "mime-types"
 
 const stream = pretty({
   colorize: true
@@ -42,7 +40,7 @@ app.get('/', (req, res) => {
   try {
     const userAgent = req.headers['user-agent']
     if (userAgent.includes('curl')) {
-      res.status(200).sendFile(path.join(__dirname, 'public', 'static', 'index.txt'))
+      res.status(200).sendFile(path.join(__dirname, 'public', 'static', 'index'))
       log.info("terminal query! 🐚")
     } else {
       res.status(200).sendFile(path.join(__dirname, 'public', 'static', 'index.html'))
@@ -53,9 +51,7 @@ app.get('/', (req, res) => {
   }
 })
 
-app.get('/sh', (_req, res) => {
-  res.send('echo -e "$(curl https://shinysocks.net --silent)" | less --raw-control-chars')
-})
+app.get('/logo.png', (_req, res) => res.sendFile(path.join(__dirname, 'public', 'static', 'logo.png')))
 
 app.get('/robots.txt', (_req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'static', 'robots.txt'))
@@ -114,17 +110,8 @@ app.put('/up', (req, res) => {
 })
 
 app.get('*', (req, res) => {
-  log.warn(`client attempted: ${req.originalUrl}`)
-  try {
-    if (req.headers['user-agent'].includes('curl')) {
-      res.status(404).send("not found")
-    } else {
-      res.status(404).sendFile(path.join(__dirname, 'public', 'static', '404.html'))
-    }
-  } catch(err) {
-    res.status(404).send("not found")
-    log.error(req.params, "no user agent?", err)
-  }
+  log.warn(`client recieved not found: ${req.originalUrl}`)
+  res.status(404).send("not found")
 })
 
 app.listen(port, () => {

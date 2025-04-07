@@ -8,13 +8,6 @@
     "pino": "npm:pino",
     "pino-pretty": "npm:pino-pretty",
     "short-unique-id": "npm:short-unique-id",
-    "mime-detect": "npm:mime-detect",
-    "mime-types": "npm:mime-types"
-  },
-
-  "tasks": {
-    "start": "deno run -A --watch src/app.js",
-    "release": "deno run -A src/app.js"
   }
 }
 

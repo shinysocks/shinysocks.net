@@ -1,0 +1,55 @@
+#!/bin/bash
+
+lav='\e[1;35m'
+italav='\e[3;35m'
+blue='\e[3;34m'
+reset='\e[1;0m'
+green='\e[1;32m'
+dimgreen='\e[2;32m'
+
+
+# logo
+printf "\n"
+printf "$lav"
+printf "  ▄▄▄▗▖▗▖▄▗▖ ▄▗▖▗▖▄▄▄▗▄▄▖▄▄▗▖▗▖▄▄▄\n"
+printf "  █▄▄▐▙▟▌█▐█▖█▝▙▟▘█▄▄▐▌▐▌█ ▐▙█▘█▄▄\n"
+printf "  ▄▄█▐▌▐▌█▐▌▜█ ▐▌ ▄▄█▐▙▟▌█▄▐▌▜▌▄▄█\n"
+printf "\n\n"
+
+# hyperlinks
+printf "$lav"
+printf "  hyperlinks\n\n"
+printf "$blue"
+printf "    https://github.com/shinysocks\n"
+printf "    https://shinysocks.net/s/resume.pdf\n"
+printf "    https://linkedin.com/in/noah-dinan\n"
+printf "    https://steamcommunity.com/profiles/76561199074928968\n"
+printf "    mailto: noah at shinysocks.net\n\n"
+
+# about me
+printf "$reset"
+printf "$lav"
+printf "  about me\n\n"
+printf "$reset"
+
+printf "    Hey, my name is Noah Dinan and I am currently studying\n"
+printf "    Software Engineering at Milwaukee School of Engineering.\n\n"
+
+printf "    I'm a cat lover, computer programmer, vocalist, cyclist and videogamer\n"
+printf "    recently I've been playing terraria and eastward\n"
+printf "    currently daily-driving debian on WSL2 and writing code in neovim\n"
+printf "    avid hater of artificial intelligence and lime scooters\n\n"
+
+# endpoints
+printf "$reset$lav"
+printf "  endpoints\n\n"
+printf "$green"
+printf "     GET /recentsongs\n"
+printf "     GET /s/shared_file\n"
+printf "     GET /meme\n"
+printf "$dimgreen"
+printf "     GET /radio\n\n"
+
+printf "$reset$italav"
+printf "  shinysocks.net is hosted on a raspberry pi zero using express.js\n\n"
+printf "$reset"

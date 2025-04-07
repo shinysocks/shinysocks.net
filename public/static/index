@@ -1,0 +1,34 @@
+
+[1;35m  ▄▄▄▗▖▗▖▄▗▖ ▄▗▖▗▖▄▄▄▗▄▄▖▄▄▗▖▗▖▄▄▄
+  █▄▄▐▙▟▌█▐█▖█▝▙▟▘█▄▄▐▌▐▌█ ▐▙█▘█▄▄
+  ▄▄█▐▌▐▌█▐▌▜█ ▐▌ ▄▄█▐▙▟▌█▄▐▌▜▌▄▄█
+
+
+[1;35m  hyperlinks
+
+[3;34m    https://github.com/shinysocks
+    https://shinysocks.net/s/resume.pdf
+    https://linkedin.com/in/noah-dinan
+    https://steamcommunity.com/profiles/76561199074928968
+    mailto: noah at shinysocks.net
+
+[1;0m[1;35m  about me
+
+[1;0m    Hey, my name is Noah Dinan and I am currently studying
+    Software Engineering at Milwaukee School of Engineering.
+
+    I'm a cat lover, computer programmer, vocalist, cyclist and videogamer
+    recently I've been playing terraria and eastward
+    currently daily-driving debian on WSL2 and writing code in neovim
+    avid hater of artificial intelligence and lime scooters
+
+[1;0m[1;35m  endpoints
+
+[1;32m     GET /recentsongs
+     GET /s/shared_file
+     GET /meme
+[2;32m     GET /radio
+
+[1;0m[3;35m  shinysocks.net is hosted on a raspberry pi zero using express.js
+
+[1;0m
