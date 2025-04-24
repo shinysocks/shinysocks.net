@@ -41,7 +41,7 @@ printf "    Software Engineering at Milwaukee School of Engineering.\n\n"
 printf "    I'm a cat lover, computer programmer, vocalist, cyclist and videogamer\n"
 printf "    recently I've been attempting to complete every fishing quest in terraria\n"
 printf "    currently daily-driving debian on WSL2 and writing code in neovim\n"
-printf "    avid hater of llms and lime scooters\n\n"
+printf "    avid hater of generative ai and lime scooters\n\n"
 
 # endpoints
 printf "$reset$lav"
