@@ -1,11 +1,14 @@
 #!/bin/bash
 
+# TODO: port to cpp
+
 lav='\e[1;35m'
 italav='\e[3;35m'
 blue='\e[3;34m'
 reset='\e[1;0m'
 green='\e[1;32m'
 dimgreen='\e[2;32m'
+yellow='\e[1;33m'
 
 
 # logo
@@ -36,20 +39,48 @@ printf "    Hey, my name is Noah Dinan and I am currently studying\n"
 printf "    Software Engineering at Milwaukee School of Engineering.\n\n"
 
 printf "    I'm a cat lover, computer programmer, vocalist, cyclist and videogamer\n"
-printf "    recently I've been playing terraria and eastward\n"
+printf "    recently I've been attempting to complete every fishing quest in terraria\n"
 printf "    currently daily-driving debian on WSL2 and writing code in neovim\n"
-printf "    avid hater of artificial intelligence and lime scooters\n\n"
+printf "    avid hater of llms and lime scooters\n\n"
 
 # endpoints
 printf "$reset$lav"
 printf "  endpoints\n\n"
 printf "$green"
-printf "     GET /recentsongs\n"
-printf "     GET /s/shared_file\n"
-printf "     GET /meme\n"
+printf "     GET /s/shared_file\n\n"
 printf "$dimgreen"
-printf "     GET /radio\n\n"
+printf "     GET /radio\n"
+printf "     GET /recentsongs\n\n"
 
+# portfolio
+printf "$reset$lav"
+printf "  recent work\n\n"
+
+printf "$yellow"
+printf "     Phone Booth\n"
+printf "$blue"
+printf "     https://github.com/shinysocks/phonebooth\n"
+printf "$reset"
+printf "     wrote source code for an interactive art installation\n"
+printf "     by Daisy DiCarlo entitled Phone Booth\n\n"
+
+printf "$yellow"
+printf "     Direct Supply Kata\n"
+printf "$blue"
+printf "     https://github.com/shinysocks/direct_supply_kata\n"
+printf "$reset"
+printf "     As a component of my application to Direct Supply, created a program\n"
+printf "     which compares weather data for several locations.\n\n"
+
+
+printf "$yellow"
+printf "     Learning LaTeX\n"
+printf "$blue"
+printf "     https://github.com/shinysocks/latex\n"
+printf "$reset"
+printf "     LaTeX papers and labs for university\n\n"
+
+# footer
 printf "$reset$italav"
-printf "  shinysocks.net is hosted on a raspberry pi zero using express.js\n\n"
+printf "  shinysocks.net is hosted on aws using express.js\n\n"
 printf "$reset"

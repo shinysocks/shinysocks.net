@@ -18,17 +18,33 @@
     Software Engineering at Milwaukee School of Engineering.
 
     I'm a cat lover, computer programmer, vocalist, cyclist and videogamer
-    recently I've been playing terraria and eastward
+    recently I've been attempting to complete every fishing quest in terraria
     currently daily-driving debian on WSL2 and writing code in neovim
-    avid hater of artificial intelligence and lime scooters
+    avid hater of llms and lime scooters
 
 [1;0m[1;35m  endpoints
 
-[1;32m     GET /recentsongs
-     GET /s/shared_file
-     GET /meme
-[2;32m     GET /radio
+[1;32m     GET /s/shared_file
 
-[1;0m[3;35m  shinysocks.net is hosted on a raspberry pi zero using express.js
+[2;32m     GET /radio
+     GET /recentsongs
+
+[1;0m[1;35m  recent work
+
+[1;33m     Phone Booth
+[3;34m     https://github.com/shinysocks/phonebooth
+[1;0m     wrote source code for an interactive art installation
+     by Daisy DiCarlo entitled Phone Booth
+
+[1;33m     Direct Supply Kata
+[3;34m     https://github.com/shinysocks/direct_supply_kata
+[1;0m     As a component of my application to Direct Supply, created a program
+     which compares weather data for several locations.
+
+[1;33m     Learning LaTeX
+[3;34m     https://github.com/shinysocks/latex
+[1;0m     LaTeX papers and labs for university
+
+[1;0m[3;35m  shinysocks.net is hosted on aws using express.js
 
 [1;0m
