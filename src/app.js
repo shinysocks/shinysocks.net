@@ -1,8 +1,6 @@
 import cors from "cors"
 import fs from 'node:fs'
 import express from "express"
-import { refreshTunes, shuffle, recentSongs, } from './music.js'
-import { getMeme, refreshMemes } from './meme.js'
 import ShortUniqueId from "short-unique-id"
 import path from "path"
 import pino from "pino"
@@ -17,20 +15,10 @@ export const log = pino(stream)
 
 const __dirname = path.resolve()
 
-export const TUNES_PATH = path.join(__dirname, 'public', 'tunes', '/')
-export const MEMES_PATH = path.join(__dirname, 'public', 'memes', '/')
-
-const SHARE_URL = "https://shinysocks.net/s/"
 const suid = new ShortUniqueId({ length: 6 })
 
 const app = express()
 const port = 8888
-
-log.info(`found ${refreshTunes()} tunes 🎶`)
-log.info(`found ${refreshMemes()} memes 🤪`)
-
-// refresh tunes every 5 minutes
-setInterval(refreshTunes, 1000 * 60 * 5)
 
 app.use(cors(), express.json(), compression({ level: 9, threshold: 512 }))
 app.use('/s', express.static(path.join(__dirname, 'public', 'share')))
@@ -56,29 +44,6 @@ app.get('/logo.png', (_req, res) => res.sendFile(path.join(__dirname, 'public', 
 app.get('/robots.txt', (_req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'static', 'robots.txt'))
   log.info("bot found! 🤖")
-})
-
-app.get('/t/:query?', (req, res, next) => {
-  // t (tunes) route streams a random file
-  const song = shuffle(req.params.query)
-  if (song) {
-    res.sendFile(path.join(TUNES_PATH + song.song))
-  } else {
-    log.error("tunes query returned no matches")
-    next()
-  }
-})
-
-app.get('/recentsongs', (_req, res) => {
-  // grabs recent songs
-  res.send(recentSongs())
-})
-
-app.get('/meme', (_req, res) => {
-  // grab random meme
-  const meme = getMeme()
-  res.setHeader('meme', meme)
-  res.sendFile(path.join(MEMES_PATH, meme))
 })
 
 app.put('/up', (req, res) => {
