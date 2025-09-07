@@ -7,6 +7,11 @@ int main(void) {
     Server svr;
 
     svr.set_base_dir("./share");
+
+    svr.Get("/favicon.ico", [](const Request &req, Response &res) {
+        res.status = 200;
+        res.set_content("", "image/jpeg");
+    });
     
     svr.Get("/bomb", [](const Request &req, Response &res) {
         // https://idiallo.com/blog/zipbomb-protection
@@ -18,8 +23,12 @@ int main(void) {
         res.set_file_content("./memes/walk_your_bike.jpg");
     });
 
-    svr.Get("/ping", [](const Request &req, Response &res) {
-        res.set_content("pong\n", "text/plain");
+    svr.Get("/ping", [](const Request &, Response &res) {
+        res.set_content("pong", "text/plain");
+    });
+
+    svr.Get("/pong", [](const Request &, Response &res) {
+        res.set_content("ping", "text/plain");
     });
 
     svr.Get("/", [=](const Request &req, Response &res) {
