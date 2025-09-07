@@ -1,0 +1,85 @@
+#!/bin/bash
+
+# TODO: port to cpp
+
+lav='\e[1;35m'
+italav='\e[3;35m'
+blue='\e[3;34m'
+reset='\e[1;0m'
+green='\e[1;32m'
+dimgreen='\e[2;32m'
+yellow='\e[1;33m'
+
+
+# logo
+printf "\n"
+printf "$lav"
+printf "  ▄▄▄▗▖▗▖▄▗▖ ▄▗▖▗▖▄▄▄▗▄▄▖▄▄▗▖▗▖▄▄▄\n"
+printf "  █▄▄▐▙▟▌█▐█▖█▝▙▟▘█▄▄▐▌▐▌█ ▐▙█▘█▄▄\n"
+printf "  ▄▄█▐▌▐▌█▐▌▜█ ▐▌ ▄▄█▐▙▟▌█▄▐▌▜▌▄▄█\n"
+printf "\n\n"
+
+# hyperlinks
+printf "$lav"
+printf "  hyperlinks\n\n"
+printf "$blue"
+printf "    https://github.com/shinysocks\n"
+printf "    https://shinysocks.net/s/resume.pdf\n"
+printf "    https://linkedin.com/in/noah-dinan\n"
+printf "    https://steamcommunity.com/profiles/76561199074928968\n"
+printf "    mailto:noah@shinysocks.net\n\n"
+
+# about me
+printf "$reset"
+printf "$lav"
+printf "  about me\n\n"
+printf "$reset"
+
+printf "    Hey, my name is Noah Dinan and I am currently studying\n"
+printf "    Software Engineering at Milwaukee School of Engineering\n"
+printf "    and interning at Northwestern Mutual.\n\n"
+
+printf "    I'm a cat lover, computer programmer, vocalist, cyclist and videogamer\n"
+printf "    currently daily-driving debian on WSL2 and writing code in neovim\n"
+printf "    avid hater of generative ai and lime scooters\n\n"
+
+# endpoints
+printf "$reset$lav"
+printf "  endpoints\n\n"
+printf "$green"
+printf "     GET /s/shared_file\n\n"
+printf "$dimgreen"
+printf "     GET /radio\n"
+printf "     GET /recentsongs\n\n"
+
+# portfolio
+printf "$reset$lav"
+printf "  recent work\n\n"
+
+printf "$yellow"
+printf "     Arts at Large Gamedev Workshop\n"
+printf "$blue"
+printf "     https://github.com/shinysocks/artsatlarge_gamedev\n"
+printf "$reset"
+printf "     Developing a simple gamedev workshop using pygame and piskel\n\n"
+
+
+printf "$yellow"
+printf "     Phone Booth\n"
+printf "$blue"
+printf "     https://github.com/shinysocks/phonebooth\n"
+printf "$reset"
+printf "     wrote source code for an interactive art installation\n"
+printf "     by Daisy DiCarlo entitled Phone Booth\n\n"
+
+printf "$yellow"
+printf "     Learning LaTeX\n"
+printf "$blue"
+printf "     https://github.com/shinysocks/latex\n"
+printf "$reset"
+printf "     LaTeX papers and labs for university\n\n"
+
+# footer
+printf "$reset$italav"
+printf "  shinysocks.net is hosted on aws using express.js\n\n"
+printf "$reset"

@@ -1,0 +1,6 @@
+User-agent: Googlebot
+Allow: /
+
+# ALL GENERATIVE AI CAN FUCK OFF AND GO TO HELL
+User-agent: *
+Disallow: /
