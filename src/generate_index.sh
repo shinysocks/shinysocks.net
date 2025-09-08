@@ -1,13 +1,10 @@
 #!/bin/bash
 
-# TODO: port to cpp
-
 lav='\e[1;35m'
 italav='\e[3;35m'
 blue='\e[3;34m'
 reset='\e[1;0m'
 green='\e[1;32m'
-dimgreen='\e[2;32m'
 yellow='\e[1;33m'
 
 
@@ -24,7 +21,7 @@ printf "$lav"
 printf "  hyperlinks\n\n"
 printf "$blue"
 printf "    https://github.com/shinysocks\n"
-printf "    https://shinysocks.net/s/resume.pdf\n"
+printf "    https://shinysocks.net/resume.pdf\n"
 printf "    https://linkedin.com/in/noah-dinan\n"
 printf "    https://steamcommunity.com/profiles/76561199074928968\n"
 printf "    mailto:noah@shinysocks.net\n\n"
@@ -37,7 +34,7 @@ printf "$reset"
 
 printf "    Hey, my name is Noah Dinan and I am currently studying\n"
 printf "    Software Engineering at Milwaukee School of Engineering\n"
-printf "    and interning at Northwestern Mutual.\n\n"
+printf "    and working part time at Northwestern Mutual.\n\n"
 
 printf "    I'm a cat lover, computer programmer, vocalist, cyclist and videogamer\n"
 printf "    currently daily-driving debian on WSL2 and writing code in neovim\n"
@@ -47,9 +44,9 @@ printf "    avid hater of generative ai and lime scooters\n\n"
 printf "$reset$lav"
 printf "  endpoints\n\n"
 printf "$green"
-printf "     GET /s/shared_file\n\n"
-printf "$dimgreen"
+printf "     GET /shared_file\n"
 printf "     GET /radio\n"
+printf "     GET /pong\n"
 printf "     GET /recentsongs\n\n"
 
 # portfolio

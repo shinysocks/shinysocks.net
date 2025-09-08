@@ -1,0 +1,49 @@
+
+[1;35m  ▄▄▄▗▖▗▖▄▗▖ ▄▗▖▗▖▄▄▄▗▄▄▖▄▄▗▖▗▖▄▄▄
+  █▄▄▐▙▟▌█▐█▖█▝▙▟▘█▄▄▐▌▐▌█ ▐▙█▘█▄▄
+  ▄▄█▐▌▐▌█▐▌▜█ ▐▌ ▄▄█▐▙▟▌█▄▐▌▜▌▄▄█
+
+
+[1;35m  hyperlinks
+
+[3;34m    https://github.com/shinysocks
+    https://shinysocks.net/resume.pdf
+    https://linkedin.com/in/noah-dinan
+    https://steamcommunity.com/profiles/76561199074928968
+    mailto:noah@shinysocks.net
+
+[1;0m[1;35m  about me
+
+[1;0m    Hey, my name is Noah Dinan and I am currently studying
+    Software Engineering at Milwaukee School of Engineering
+    and working part time at Northwestern Mutual.
+
+    I'm a cat lover, computer programmer, vocalist, cyclist and videogamer
+    currently daily-driving debian on WSL2 and writing code in neovim
+    avid hater of generative ai and lime scooters
+
+[1;0m[1;35m  endpoints
+
+[1;32m     GET /shared_file
+     GET /radio
+     GET /pong
+     GET /recentsongs
+
+[1;0m[1;35m  recent work
+
+[1;33m     Arts at Large Gamedev Workshop
+[3;34m     https://github.com/shinysocks/artsatlarge_gamedev
+[1;0m     Developing a simple gamedev workshop using pygame and piskel
+
+[1;33m     Phone Booth
+[3;34m     https://github.com/shinysocks/phonebooth
+[1;0m     wrote source code for an interactive art installation
+     by Daisy DiCarlo entitled Phone Booth
+
+[1;33m     Learning LaTeX
+[3;34m     https://github.com/shinysocks/latex
+[1;0m     LaTeX papers and labs for university
+
+[1;0m[3;35m  shinysocks.net is hosted on aws using express.js
+
+[1;0m
