@@ -20,16 +20,20 @@
 
     I'm a cat lover, computer programmer, vocalist, cyclist and videogamer
     currently daily-driving debian on WSL2 and writing code in neovim
-    avid hater of generative ai and lime scooters
+    avid hater of generative ai and technofacism
 
 [1;0m[1;35m  endpoints
 
 [1;32m     GET /shared_file
      GET /radio
      GET /pong
-     GET /recentsongs
+     GET /play | sh
 
 [1;0m[1;35m  recent work
+
+[1;33m     Re-Re-Rewrite shinysocks.net
+[3;34m     https://github.com/shinysocks/shinysocks.net
+[1;0m     Rewrote shinysocks.net for the third? time in c++
 
 [1;33m     Arts at Large Gamedev Workshop
 [3;34m     https://github.com/shinysocks/artsatlarge_gamedev
@@ -40,10 +44,6 @@
 [1;0m     wrote source code for an interactive art installation
      by Daisy DiCarlo entitled Phone Booth
 
-[1;33m     Learning LaTeX
-[3;34m     https://github.com/shinysocks/latex
-[1;0m     LaTeX papers and labs for university
-
-[1;0m[3;35m  shinysocks.net is hosted on aws using express.js
+[1;0m[3;35m  shinysocks.net is hosted on aws (for now)
 
 [1;0m

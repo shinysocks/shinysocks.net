@@ -38,7 +38,7 @@ printf "    and working part time at Northwestern Mutual.\n\n"
 
 printf "    I'm a cat lover, computer programmer, vocalist, cyclist and videogamer\n"
 printf "    currently daily-driving debian on WSL2 and writing code in neovim\n"
-printf "    avid hater of generative ai and lime scooters\n\n"
+printf "    avid hater of generative ai and technofacism\n\n"
 
 # endpoints
 printf "$reset$lav"
@@ -47,11 +47,19 @@ printf "$green"
 printf "     GET /shared_file\n"
 printf "     GET /radio\n"
 printf "     GET /pong\n"
-printf "     GET /recentsongs\n\n"
+printf "     GET /play | sh\n\n"
 
 # portfolio
 printf "$reset$lav"
 printf "  recent work\n\n"
+
+
+printf "$yellow"
+printf "     Re-Re-Rewrite shinysocks.net\n"
+printf "$blue"
+printf "     https://github.com/shinysocks/shinysocks.net\n"
+printf "$reset"
+printf "     Rewrote shinysocks.net for the third? time in c++\n\n"
 
 printf "$yellow"
 printf "     Arts at Large Gamedev Workshop\n"
@@ -69,14 +77,8 @@ printf "$reset"
 printf "     wrote source code for an interactive art installation\n"
 printf "     by Daisy DiCarlo entitled Phone Booth\n\n"
 
-printf "$yellow"
-printf "     Learning LaTeX\n"
-printf "$blue"
-printf "     https://github.com/shinysocks/latex\n"
-printf "$reset"
-printf "     LaTeX papers and labs for university\n\n"
 
 # footer
 printf "$reset$italav"
-printf "  shinysocks.net is hosted on aws using express.js\n\n"
+printf "  shinysocks.net is hosted on aws (for now)\n\n"
 printf "$reset"

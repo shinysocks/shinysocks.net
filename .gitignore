@@ -1,9 +1,10 @@
 ssl
 server
+server.log
 httplib.h
 
 share/*
 !share/robots.txt
 !share/index
-!share/home.html
+!share/play
 !share/logo.png
