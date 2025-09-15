@@ -5,4 +5,5 @@ httplib.h
 share/*
 !share/robots.txt
 !share/index
+!share/home.html
 !share/logo.png
