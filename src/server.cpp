@@ -13,29 +13,31 @@ void log(const Request &req, const Response &res);
 void log(string m, int n = 0);
 
 int main(void) {
-    vector<string> filenames;
+    if (exists(TUNES_PATH)) {
+        vector<string> filenames;
 
-    for (const auto &f : directory_iterator(TUNES_PATH)) filenames.push_back(f.path());
-    log("found tunes: ", (int) filenames.size());
+        for (const auto &f : directory_iterator(TUNES_PATH)) filenames.push_back(f.path());
+        log("found tunes: ", (int) filenames.size());
 
-    auto audio = thread([&](){
-        log("started ticker thread ");
-        while (true) {
-            current_time = 0.0;
-            srand(time(nullptr));
-            int i = rand() % filenames.size();
-            current_song = filenames.at(i);
-            int first = current_song.find_last_of("/") + 1;
-            int last = current_song.find_first_of(".");
-            
-            double duration = stod(current_song.substr(first, last));
+        auto audio = thread([&](){
+            log("started ticker thread ");
+            while (true) {
+                current_time = 0.0;
+                srand(time(nullptr));
+                int i = rand() % filenames.size();
+                current_song = filenames.at(i);
+                int first = current_song.find_last_of("/") + 1;
+                int last = current_song.find_first_of(".");
+                
+                double duration = stod(current_song.substr(first, last));
 
-            for (int i = 0; i < (duration+2)*10; i++) {
-                this_thread::sleep_for(100ms);
-                current_time += 0.1;
+                for (int i = 0; i < (duration+2)*10; i++) {
+                    this_thread::sleep_for(100ms);
+                    current_time += 0.1;
+                }
             }
-        }
-    });
+        });
+    }
 
     Server svr;
 
