@@ -6,5 +6,5 @@ httplib.h
 share/*
 !share/robots.txt
 !share/index
-!share/play
+!share/radio
 !share/logo.png

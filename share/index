@@ -24,10 +24,9 @@
 
 [1;0m[1;35m  endpoints
 
-[1;32m     GET /shared_file
-     GET /radio
-     GET /pong
-     GET /play | sh
+[1;32m     GET /pong
+     GET /shared_file
+     GET /radio | sh
 
 [1;0m[1;35m  recent work
 

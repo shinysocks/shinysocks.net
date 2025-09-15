@@ -67,9 +67,8 @@ class Routes {
         res.set_content("ping", "text/plain");
     };
 
-    constexpr static auto radio = [](const auto &req, auto &res) {
+    constexpr static auto radio_song = [](const auto &req, auto &res) {
         res.set_file_content(current_song, "audio/mp3");
-        res.set_header("Song", current_song);
     };
 
     constexpr static auto radio_elapsed = [](const auto &req, auto &res) {

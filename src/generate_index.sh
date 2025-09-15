@@ -44,10 +44,9 @@ printf "    avid hater of generative ai and technofacism\n\n"
 printf "$reset$lav"
 printf "  endpoints\n\n"
 printf "$green"
-printf "     GET /shared_file\n"
-printf "     GET /radio\n"
 printf "     GET /pong\n"
-printf "     GET /play | sh\n\n"
+printf "     GET /shared_file\n"
+printf "     GET /radio | sh\n\n"
 
 # portfolio
 printf "$reset$lav"
