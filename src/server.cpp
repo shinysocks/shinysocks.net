@@ -1,5 +1,4 @@
 #include "routes.h"
-#include <fstream>
 #include <httplib.h>
 #include <filesystem>
 
@@ -7,20 +6,16 @@ using namespace httplib;
 
 int PORT = 8888;
 string ADDR = "localhost";
-ofstream LOGFILE("server.log");
 
-void log(const Request &req, const Response &res);
-void log(string m, int n = 0);
-string get_ip(const Request &r);
+Server::HandlerResponse bomb(const Request &req, Response &res);
 
 int main(void) {
     vector<string> filenames;
 
     for (const auto &f : directory_iterator(TUNES_PATH)) filenames.push_back(f.path());
-    log("found tunes: ", (int) filenames.size());
 
     auto audio = thread([&](){
-        log("started ticker thread ");
+        log("started ticker thread");
         while (true) {
             current_time = 0.0;
             srand(time(nullptr));
@@ -31,7 +26,7 @@ int main(void) {
             
             double duration = stod(current_song.substr(first, last));
 
-            for (int i = 0; i < (duration+2)*10; i++) {
+            for (int i = 0; i < (duration+4)*10; i++) {
                 this_thread::sleep_for(100ms);
                 current_time += 0.1;
             }
@@ -42,37 +37,45 @@ int main(void) {
 
     svr.Get("/", Routes::root);
     svr.Get("/favicon.ico", Routes::favicon);
-    svr.Get("/bomb", Routes::bomb);
     svr.Get("/pong", Routes::pong);
     svr.Get("/radio/song", Routes::radio_song);
     svr.Get("/radio/elapsed", Routes::radio_elapsed);
 
     svr.set_base_dir("./share");
-    svr.set_logger([&](const auto& req, const auto& res) { log(req, res); });
 
-    log("starting web server :", PORT);
+    svr.set_pre_routing_handler([&](const auto& req, Response& res) {
+        Server::HandlerResponse ret = Server::HandlerResponse::Unhandled;
+        string user_agent = "";
+        string status = "";
+
+        if (req.has_header("User-Agent")) {
+            user_agent = req.get_header_value("User-Agent");
+        }
+
+        if (user_agent.length() == 0) ret = bomb(req, res);
+        else if (user_agent.find("Python-urllib") != std::string::npos) ret = bomb(req, res);
+        else if (user_agent.find("crawler") != std::string::npos) ret = bomb(req, res);
+        else if (req.path.find("php") != std::string::npos) ret = bomb(req, res);
+
+        if (ret == Server::HandlerResponse::Handled) {
+           status = " <- 💣";
+        }
+
+        cout << get_ip(req) << ": " << req.path << " [" << user_agent << "]" << status << endl;
+        LOGFILE << get_ip(req) << ": " << req.path << " [" << user_agent << "]" << status << endl;
+
+        return ret;
+    });
+
+    log("starting web server :8888");
     svr.listen(ADDR, PORT);
     LOGFILE.close();
 }
 
-void log(const Request &req, const Response &res) {
-    string user_agent = "";
-    if (req.has_header("User-Agent")) user_agent = req.get_header_value("User-Agent");
-    if (user_agent.length() == 0) user_agent = "bot";
-
-    cout << get_ip(req) << ": " << req.path << " [" << user_agent << "] <- " << res.status << endl;
-    LOGFILE << get_ip(req) << ": " << req.path << " [" << user_agent << "] <- "<< res.status << endl;
+Server::HandlerResponse bomb(const Request &req, Response &res) {
+    // Inspired by https://idiallo.com/blog/zipbomb-protection
+    res.set_file_content("./share/bomb", "text/php");
+    res.set_header("Content-Encoding", "gzip");
+    return Server::HandlerResponse::Handled;
 }
 
-void log(string m, int n) {
-    cout << m << n << endl;
-    LOGFILE << m << n << endl;
-}
-
-string get_ip(const Request &req) {
-    if (req.has_header("X-Real-Ip")) {
-        return req.get_header_value("X-Real-Ip");
-    } else {
-        return req.get_header_value("X-Forwarded-For");
-    }
-}
