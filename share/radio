@@ -2,8 +2,15 @@
 S="http://shinysocks.net/radio/song"
 E="http://shinysocks.net/radio/elapsed"
 
+if ! command -v ffplay >/dev/null 2>&1
+then
+    echo "you don't have ffmpeg, loser"
+    exit 1
+fi
+
+
 while true;
 do
-    mpv --quiet --no-video --start="+$(curl $E)" "$S"
-    # curl -s "$S" | ffplay -autoexit -nodisp -hide_banner -loglevel error -ss $(curl -s $E)s -
+    # mpv --quiet --no-video --start="+$(curl $E)" "$S"
+    curl -s "$S" | ffplay -autoexit -nodisp -hide_banner -loglevel error -ss $(curl -s $E)s -
 done
