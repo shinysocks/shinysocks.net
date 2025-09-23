@@ -8,3 +8,5 @@ share/*
 !share/index
 !share/radio
 !share/logo.png
+!share/ai.html
+!share/genai_sources.txt
