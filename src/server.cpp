@@ -56,6 +56,7 @@ int main(void) {
         else if (user_agent.find("Python-urllib") != std::string::npos) ret = bomb(req, res);
         else if (user_agent.find("crawler") != std::string::npos) ret = bomb(req, res);
         else if (req.path.find("php") != std::string::npos) ret = bomb(req, res);
+        else if (req.path.find("env") != std::string::npos) ret = bomb(req, res);
 
         if (ret == Server::HandlerResponse::Handled) {
            status = " <- 💣";

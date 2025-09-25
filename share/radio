@@ -11,6 +11,5 @@ fi
 
 while true;
 do
-    # mpv --quiet --no-video --start="+$(curl $E)" "$S"
-    curl -s "$S" | ffplay -autoexit -nodisp -hide_banner -loglevel error -ss $(curl -s $E)s -
+    $(curl -s "$S" | ffplay -autoexit -nodisp -hide_banner -loglevel error -ss $(curl -s $E)s -) > /dev/null 2>&1
 done
