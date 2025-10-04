@@ -5,8 +5,8 @@ httplib.h
 
 share/*
 !share/robots.txt
-!share/index
 !share/radio
 !share/logo.png
+!share/bomb
 !share/ai.html
 !share/genai_sources.txt
