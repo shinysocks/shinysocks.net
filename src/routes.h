@@ -13,7 +13,7 @@ inline string get_ip(const Request &r);
 
 inline ofstream LOGFILE("server.log");
 
-const string TUNES_PATH = "/home/shinysocks/sync/tunes/";
+const string TUNES_PATH = "";
 
 const string HTML_RES = R"(
     <!DOCTYPE html>
@@ -63,11 +63,11 @@ class Routes {
     };
 
     constexpr static auto radio_song = [](const auto &req, auto &res) {
-        res.set_file_content(current_song, "audio/mp3");
+        res.set_content("removed", "text/plain");
     };
 
     constexpr static auto radio_elapsed = [](const auto &req, auto &res) {
-        res.set_content(to_string(current_time), "text/plain");
+        res.set_content("69", "text/plain");
     };
 };
 

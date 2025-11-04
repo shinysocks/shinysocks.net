@@ -1,4 +1,7 @@
 #!/bin/bash
+
+echo "removed" && exit
+
 S="http://shinysocks.net/radio/song"
 E="http://shinysocks.net/radio/elapsed"
 
